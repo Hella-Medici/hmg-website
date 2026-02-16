@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hella Medici Group | Asset-Backed Agriculture & Commodities</title>
+    <title>Hella Medici Group</title>
     <style>
         * {
             margin: 0;
@@ -12,486 +12,257 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0d0d0d;
+            color: #c0c0c0;
+            line-height: 1.7;
+            font-weight: 300;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Arial', sans-serif;
+        h1, h2, h3 {
             font-weight: 300;
             letter-spacing: 1px;
+            color: #ffffff;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 50px;
         }
 
         /* Header */
         header {
-            background-color: #000;
-            padding: 30px 0;
-            border-bottom: 1px solid #333;
+            padding: 40px 0;
+            border-bottom: 1px solid #1a1a1a;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 300;
-            letter-spacing: 3px;
-            color: #d4af37;
+            letter-spacing: 4px;
+            color: #b89968;
+            text-transform: uppercase;
         }
 
         /* Hero */
         .hero {
-            padding: 120px 0;
-            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);
-            border-bottom: 1px solid #333;
+            padding: 140px 0 120px;
+            border-bottom: 1px solid #1a1a1a;
         }
 
         .hero h1 {
-            font-size: 56px;
-            margin-bottom: 20px;
-            color: #fff;
-            line-height: 1.2;
-        }
-
-        .hero .subtitle {
-            font-size: 22px;
-            color: #d4af37;
+            font-size: 52px;
             margin-bottom: 30px;
+            line-height: 1.2;
             font-weight: 300;
         }
 
-        .hero p {
-            font-size: 18px;
-            color: #b0b0b0;
-            max-width: 700px;
-            margin-bottom: 40px;
+        .hero .tagline {
+            font-size: 16px;
+            color: #808080;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: #d4af37;
-            color: #000;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            border: 2px solid #d4af37;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: transparent;
-            color: #d4af37;
-        }
-
-        /* Section Styles */
+        /* Section */
         section {
             padding: 100px 0;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #1a1a1a;
         }
 
         section h2 {
-            font-size: 42px;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: #d4af37;
+            font-size: 32px;
             margin-bottom: 50px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* About */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 16px;
-            color: #c0c0c0;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .stat-item {
-            padding: 30px;
-            background-color: #111;
-            border: 1px solid #222;
-        }
-
-        .stat-number {
-            font-size: 36px;
-            color: #d4af37;
             font-weight: 300;
-            margin-bottom: 10px;
         }
 
-        .stat-label {
-            font-size: 14px;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .section-content {
+            max-width: 800px;
+        }
+
+        .section-content p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #a0a0a0;
         }
 
         /* Operating Divisions */
         .divisions-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 50px;
+            margin-top: 60px;
         }
 
-        .division-card {
-            background-color: #111;
-            padding: 40px;
-            border: 1px solid #222;
+        .division {
+            padding: 50px 0;
+            border-top: 1px solid #b89968;
         }
 
-        .division-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #d4af37;
-        }
-
-        .division-card p {
-            font-size: 15px;
-            color: #999;
-            margin-bottom: 20px;
-        }
-
-        .division-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .division-card li {
-            font-size: 14px;
-            color: #b0b0b0;
-            padding: 8px 0;
-            border-bottom: 1px solid #1a1a1a;
-        }
-
-        .division-card li:last-child {
-            border-bottom: none;
-        }
-
-        /* Competitive Edge */
-        .edge-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        .edge-item {
-            padding: 40px;
-            background-color: #0d0d0d;
-            border-left: 3px solid #d4af37;
-        }
-
-        .edge-item h3 {
+        .division h3 {
             font-size: 20px;
-            margin-bottom: 15px;
-            color: #fff;
+            margin-bottom: 30px;
+            font-weight: 400;
         }
 
-        .edge-item p {
+        .division ul {
+            list-style: none;
+        }
+
+        .division li {
             font-size: 15px;
-            color: #999;
+            color: #909090;
+            padding: 10px 0;
+            line-height: 1.6;
         }
 
-        /* Investment Overview */
-        .investment-content {
+        /* Operating Model */
+        .model-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 40px;
+            margin-top: 60px;
         }
 
-        .investment-details {
-            background-color: #111;
-            padding: 50px;
-            border: 1px solid #333;
+        .model-item {
+            text-align: center;
         }
 
-        .investment-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 0;
-            border-bottom: 1px solid #222;
-        }
-
-        .investment-row:last-child {
-            border-bottom: none;
-        }
-
-        .investment-label {
+        .model-item h4 {
             font-size: 14px;
-            color: #888;
-            text-transform: uppercase;
+            color: #b89968;
+            font-weight: 400;
             letter-spacing: 1px;
         }
 
-        .investment-value {
-            font-size: 20px;
-            color: #d4af37;
-            font-weight: 600;
+        /* Growth Framework */
+        .framework-content {
+            margin-top: 60px;
         }
 
-        .allocation-list {
-            list-style: none;
-        }
-
-        .allocation-item {
-            padding: 20px 0;
-            border-bottom: 1px solid #1a1a1a;
-        }
-
-        .allocation-item:last-child {
-            border-bottom: none;
-        }
-
-        .allocation-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .allocation-name {
-            font-size: 16px;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .allocation-percent {
-            font-size: 18px;
-            color: #d4af37;
-        }
-
-        .allocation-desc {
-            font-size: 14px;
-            color: #777;
-        }
-
-        /* Growth Roadmap */
-        .roadmap-timeline {
+        .phases {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 50px;
+            gap: 60px;
+            margin-bottom: 50px;
         }
 
-        .roadmap-phase {
-            padding: 40px;
-            background-color: #0d0d0d;
-            border-top: 3px solid #d4af37;
+        .phase {
+            text-align: center;
         }
 
-        .phase-number {
-            font-size: 14px;
-            color: #d4af37;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .phase-title {
+        .phase-arrow {
             font-size: 24px;
-            color: #fff;
-            margin-bottom: 10px;
+            color: #404040;
+            margin: 0 20px;
         }
 
-        .phase-period {
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 20px;
-            font-style: italic;
+        .phase h4 {
+            font-size: 16px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
 
-        .roadmap-phase ul {
-            list-style: none;
-        }
-
-        .roadmap-phase li {
+        .phase p {
             font-size: 14px;
-            color: #999;
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
+            color: #707070;
+            line-height: 1.6;
         }
 
-        .roadmap-phase li:before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #d4af37;
+        .framework-desc {
+            font-size: 15px;
+            color: #a0a0a0;
+            line-height: 1.8;
+            max-width: 700px;
         }
 
         /* Leadership */
         .leadership-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 60px;
+            max-width: 700px;
+            margin-top: 60px;
         }
 
-        .founder-profile {
-            background-color: #111;
-            padding: 40px;
-            border: 1px solid #222;
-        }
-
-        .founder-name {
-            font-size: 28px;
-            color: #d4af37;
+        .leader-name {
+            font-size: 24px;
+            color: #ffffff;
             margin-bottom: 5px;
+            font-weight: 300;
         }
 
-        .founder-title {
+        .leader-title {
             font-size: 14px;
-            color: #666;
+            color: #b89968;
             margin-bottom: 30px;
-            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .founder-bio {
+        .leader-bio {
             font-size: 15px;
-            color: #999;
+            color: #909090;
             line-height: 1.8;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .team-member {
-            padding: 30px;
-            background-color: #0d0d0d;
-            border: 1px solid #1a1a1a;
-        }
-
-        .team-member h4 {
-            font-size: 18px;
-            color: #fff;
-            margin-bottom: 5px;
-        }
-
-        .team-role {
-            font-size: 13px;
-            color: #d4af37;
-            margin-bottom: 15px;
-        }
-
-        .team-member p {
-            font-size: 14px;
-            color: #777;
         }
 
         /* Contact */
         .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            margin-top: 60px;
         }
 
-        .contact-content p {
+        .contact-email {
             font-size: 18px;
-            color: #999;
-            margin-bottom: 40px;
+            color: #b89968;
+            text-decoration: none;
+            border-bottom: 1px solid #b89968;
+            padding-bottom: 2px;
+            display: inline-block;
         }
 
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin-top: 40px;
-        }
-
-        .contact-item h4 {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .contact-item p {
-            font-size: 18px;
+        .contact-email:hover {
             color: #d4af37;
+            border-bottom-color: #d4af37;
         }
 
         /* Footer */
         footer {
-            padding: 40px 0;
-            background-color: #000;
+            padding: 50px 0;
             text-align: center;
-            border-top: 1px solid #222;
         }
 
         footer p {
-            font-size: 13px;
-            color: #555;
+            font-size: 12px;
+            color: #404040;
+            letter-spacing: 1px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .container {
-                padding: 0 20px;
+                padding: 0 30px;
+            }
+
+            .hero {
+                padding: 100px 0 80px;
             }
 
             .hero h1 {
                 font-size: 36px;
             }
 
-            .hero .subtitle {
-                font-size: 18px;
+            section {
+                padding: 70px 0;
             }
 
-            .about-content,
-            .investment-content,
-            .leadership-content {
+            .divisions-grid,
+            .model-grid,
+            .phases {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
 
-            .divisions-grid,
-            .edge-grid,
-            .roadmap-timeline,
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .hero {
-                padding: 80px 0;
+            section h2 {
+                font-size: 28px;
+                margin-bottom: 40px;
             }
         }
     </style>
@@ -500,302 +271,127 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">HELLA MEDICI GROUP</div>
+            <div class="logo">Hella Medici Group</div>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Building Asset-Backed<br>Businesses in Africa</h1>
-            <p class="subtitle">Agri-Production · Commodities · Strategic Capital</p>
-            <p>HMG is a technology-enabled operating company focused on building high-margin, scalable businesses across agriculture and bio-resources in Africa. We combine operational discipline, modern systems, and strategic capital deployment to create sustainable long-term value.</p>
-            <a href="#contact" class="cta-button">INVESTOR INQUIRIES</a>
+            <h1>Building Scalable, Asset-Backed<br>Businesses in Africa</h1>
+            <p class="tagline">Agri-production · Commodities · Treasury operations</p>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about">
+    <!-- Company Overview -->
+    <section>
         <div class="container">
-            <div class="section-subtitle">Company Overview</div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Structured for Scale</h2>
-                    <p>Hella Medici Group operates with a startup mindset—lean teams, data-driven execution, and technology-enabled operations—while targeting real-economy sectors with clear demand, defensible margins, and export potential.</p>
-                    <p>We apply modern management systems and automation to traditional agriculture, creating competitive advantages that traditional operators cannot replicate quickly.</p>
-                    <p>Our diversified business model reduces risk while creating multiple pathways to profitability and scale.</p>
-                </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">₦100M</div>
-                        <div class="stat-label">Post-Money Valuation</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Operating Divisions</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">60-70%</div>
-                        <div class="stat-label">Target Gross Margins</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2027</div>
-                        <div class="stat-label">Series A Target</div>
-                    </div>
-                </div>
+            <h2>Company Overview</h2>
+            <div class="section-content">
+                <p>Hella Medici Group is an operating company focused on building and scaling asset-backed businesses across agriculture, bio-resources, and commodities in Africa. We apply disciplined capital allocation, technology-enabled systems, and structured management to create sustainable operations with measurable output and clear demand. Our approach combines real-economy focus with modern operational infrastructure.</p>
             </div>
         </div>
     </section>
 
     <!-- Operating Divisions -->
-    <section id="divisions">
+    <section>
         <div class="container">
-            <div class="section-subtitle">Business Structure</div>
             <h2>Operating Divisions</h2>
             <div class="divisions-grid">
-                <div class="division-card">
+                <div class="division">
                     <h3>Agri-Production</h3>
-                    <p>Scalable bio-resource production with strong local demand and export potential.</p>
                     <ul>
-                        <li>Black Soldier Fly (BSF) maggot production</li>
-                        <li>High-protein livestock feed</li>
-                        <li>Fast production cycles, high margins</li>
-                        <li>Scorpion farming (pharmaceutical venom)</li>
-                        <li>Facility secured and operational</li>
+                        <li>Black Soldier Fly maggot production for livestock feed</li>
+                        <li>High-margin bio-resource operations</li>
+                        <li>Scalable production with controlled environment systems</li>
                     </ul>
                 </div>
-                <div class="division-card">
-                    <h3>Commodities & Trade</h3>
-                    <p>Structured sourcing, wholesale trade, and export of agricultural products.</p>
+                <div class="division">
+                    <h3>Commodities</h3>
                     <ul>
-                        <li>Stockfish export from Norway</li>
-                        <li>Aba distribution hub (nationwide reach)</li>
-                        <li>Agricultural commodity sourcing</li>
-                        <li>Export-ready products</li>
-                        <li>Steady cash flow generation</li>
+                        <li>Stockfish trade and distribution</li>
+                        <li>Agricultural commodity sourcing and export</li>
+                        <li>Structured trade operations with established supply networks</li>
                     </ul>
                 </div>
-                <div class="division-card">
-                    <h3>Treasury Operations</h3>
-                    <p>Proprietary trading of company balance sheet capital across diversified markets.</p>
+                <div class="division">
+                    <h3>Treasury</h3>
                     <ul>
-                        <li>Forex, equities, bonds, treasury bills</li>
-                        <li>Company capital only (not investor funds)</li>
+                        <li>Proprietary trading of company balance sheet capital</li>
+                        <li>Diversified market participation across forex, equities, and fixed income</li>
                         <li>Risk-managed portfolio allocation</li>
-                        <li>Profits flow to company P&L</li>
-                        <li>Enhances overall returns</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Competitive Edge -->
-    <section id="edge">
+    <!-- Operating Model -->
+    <section>
         <div class="container">
-            <div class="section-subtitle">Market Position</div>
-            <h2>Defensible Competitive Moat</h2>
-            <div class="edge-grid">
-                <div class="edge-item">
-                    <h3>Multi-Revenue Diversification</h3>
-                    <p>BSF production, stockfish trade, scorpion farming, and treasury operations create resilient cash flow. If one division underperforms, others compensate—reducing overall business risk.</p>
+            <h2>Operating Model</h2>
+            <div class="model-grid">
+                <div class="model-item">
+                    <h4>Real Assets</h4>
                 </div>
-                <div class="edge-item">
-                    <h3>Tech-Enabled Scale</h3>
-                    <p>Automation, climate control systems, and digital transparency platform enable 3x faster growth than manual competitors. Technology reduces inefficiencies and improves investor reporting.</p>
+                <div class="model-item">
+                    <h4>Measurable Output</h4>
                 </div>
-                <div class="edge-item">
-                    <h3>Distribution Network</h3>
-                    <p>Aba commercial hub positioning and logistics infrastructure create significant barriers to entry. Nationwide distribution capability is difficult and expensive for new entrants to replicate.</p>
+                <div class="model-item">
+                    <h4>Structured Execution</h4>
                 </div>
-                <div class="edge-item">
-                    <h3>Operational Expertise</h3>
-                    <p>Founder's trading discipline and risk management expertise applied to production efficiency and capital allocation. Data-driven decision making across all business units.</p>
+                <div class="model-item">
+                    <h4>Digital Oversight</h4>
+                </div>
+                <div class="model-item">
+                    <h4>Capital Discipline</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Investment Overview -->
-    <section id="investment">
+    <!-- Growth Framework -->
+    <section>
         <div class="container">
-            <div class="section-subtitle">Seed Round</div>
-            <h2>Investment Overview</h2>
-            <div class="investment-content">
-                <div class="investment-details">
-                    <div class="investment-row">
-                        <span class="investment-label">Total Raise</span>
-                        <span class="investment-value">₦25,000,000</span>
+            <h2>Growth Framework</h2>
+            <div class="framework-content">
+                <div class="phases">
+                    <div class="phase">
+                        <h4>Foundation</h4>
+                        <p>Establishing core operations, facility infrastructure, and initial production capacity</p>
                     </div>
-                    <div class="investment-row">
-                        <span class="investment-label">Structure</span>
-                        <span class="investment-value">8 Slots @ ₦3.125M</span>
+                    <div class="phase">
+                        <h4>Expansion</h4>
+                        <p>Scaling production volume, launching trade operations, achieving operational break-even</p>
                     </div>
-                    <div class="investment-row">
-                        <span class="investment-label">Equity Offered</span>
-                        <span class="investment-value">25%</span>
-                    </div>
-                    <div class="investment-row">
-                        <span class="investment-label">Pre-Money Valuation</span>
-                        <span class="investment-value">₦75,000,000</span>
-                    </div>
-                    <div class="investment-row">
-                        <span class="investment-label">Post-Money Valuation</span>
-                        <span class="investment-value">₦100,000,000</span>
-                    </div>
-                    <div class="investment-row">
-                        <span class="investment-label">Founder Ownership</span>
-                        <span class="investment-value">75%</span>
+                    <div class="phase">
+                        <h4>Scale</h4>
+                        <p>Multi-facility operations, institutional partnerships, structured holding company transition</p>
                     </div>
                 </div>
-                <div>
-                    <h3 style="color: #fff; margin-bottom: 30px; font-size: 28px;">Capital Deployment</h3>
-                    <ul class="allocation-list">
-                        <li class="allocation-item">
-                            <div class="allocation-header">
-                                <span class="allocation-name">BSF Farm Scale-Up</span>
-                                <span class="allocation-percent">50%</span>
-                            </div>
-                            <div class="allocation-desc">₦12.5M · 3x capacity expansion, climate control, automation, feed stock</div>
-                        </li>
-                        <li class="allocation-item">
-                            <div class="allocation-header">
-                                <span class="allocation-name">Stockfish Trade Launch</span>
-                                <span class="allocation-percent">25%</span>
-                            </div>
-                            <div class="allocation-desc">₦6.25M · Initial inventory, Aba distribution hub, cold storage, logistics</div>
-                        </li>
-                        <li class="allocation-item">
-                            <div class="allocation-header">
-                                <span class="allocation-name">Scorpion Farming Pilot</span>
-                                <span class="allocation-percent">10%</span>
-                            </div>
-                            <div class="allocation-desc">₦2.5M · Controlled environment setup, breeding stock, venom extraction</div>
-                        </li>
-                        <li class="allocation-item">
-                            <div class="allocation-header">
-                                <span class="allocation-name">Corporate Infrastructure</span>
-                                <span class="allocation-percent">10%</span>
-                            </div>
-                            <div class="allocation-desc">₦2.5M · Legal structuring, platform development, team, branding</div>
-                        </li>
-                        <li class="allocation-item">
-                            <div class="allocation-header">
-                                <span class="allocation-name">Operating Reserve</span>
-                                <span class="allocation-percent">5%</span>
-                            </div>
-                            <div class="allocation-desc">₦1.25M · 3-month cash buffer, contingency fund</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Growth Roadmap -->
-    <section id="roadmap">
-        <div class="container">
-            <div class="section-subtitle">Strategic Timeline</div>
-            <h2>Growth Roadmap</h2>
-            <div class="roadmap-timeline">
-                <div class="roadmap-phase">
-                    <div class="phase-number">Phase 1</div>
-                    <div class="phase-title">Foundation</div>
-                    <div class="phase-period">Q1-Q2 2026</div>
-                    <ul>
-                        <li>BSF production at scale</li>
-                        <li>Stockfish trade launched</li>
-                        <li>Transparency platform live</li>
-                        <li>Team fully hired</li>
-                    </ul>
-                </div>
-                <div class="roadmap-phase">
-                    <div class="phase-number">Phase 2</div>
-                    <div class="phase-title">Expansion</div>
-                    <div class="phase-period">Q3-Q4 2026</div>
-                    <ul>
-                        <li>Scorpion farm operational</li>
-                        <li>Trade volume 3x increase</li>
-                        <li>Break even achieved</li>
-                        <li>Export markets established</li>
-                    </ul>
-                </div>
-                <div class="roadmap-phase">
-                    <div class="phase-number">Phase 3</div>
-                    <div class="phase-title">Scale</div>
-                    <div class="phase-period">2027</div>
-                    <ul>
-                        <li>Series A readiness</li>
-                        <li>Multi-facility operations</li>
-                        <li>Holding company structure</li>
-                        <li>Exit opportunities available</li>
-                    </ul>
-                </div>
+                <p class="framework-desc">HMG operates on a phased deployment model, prioritizing operational validation and cash flow generation before pursuing scale. Each phase builds defensible infrastructure and market position while maintaining disciplined capital allocation. The framework is designed to support systematic expansion across divisions and geographies.</p>
             </div>
         </div>
     </section>
 
     <!-- Leadership -->
-    <section id="leadership">
+    <section>
         <div class="container">
-            <div class="section-subtitle">Management Team</div>
             <h2>Leadership</h2>
             <div class="leadership-content">
-                <div class="founder-profile">
-                    <h3 class="founder-name">Annabelle Onuma</h3>
-                    <div class="founder-title">Founder & Chief Executive Officer</div>
-                    <div class="founder-bio">
-                        <p style="margin-bottom: 15px;">Active forex trader with proven track record trading prop firm accounts. Deep expertise in market structure, risk management, and capital allocation.</p>
-                        <p style="margin-bottom: 15px;">Social Media Manager at Cole Tech Yard (CTech), leading tech hub branding and community building initiatives.</p>
-                        <p>Core competencies: Strategic execution, data-driven decision making, brand positioning, operational discipline.</p>
-                    </div>
-                </div>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <h4>Operations Lead</h4>
-                        <div class="team-role">On-Site Management</div>
-                        <p>BSF facility management, quality control, production optimization, daily operations oversight.</p>
-                    </div>
-                    <div class="team-member">
-                        <h4>Corporate Lawyer</h4>
-                        <div class="team-role">Legal & Compliance</div>
-                        <p>Legal compliance, shareholder agreements, contract structuring, regulatory navigation.</p>
-                    </div>
-                    <div class="team-member">
-                        <h4>Chief Financial Officer</h4>
-                        <div class="team-role">Finance & Reporting</div>
-                        <p>Financial reporting, investor relations, platform data management, capital allocation oversight.</p>
-                    </div>
-                    <div class="team-member">
-                        <h4>Trade Coordinator</h4>
-                        <div class="team-role">Commodities Division</div>
-                        <p>Stockfish sourcing, logistics management, Aba distribution hub operations, supplier relations.</p>
-                    </div>
-                </div>
+                <h3 class="leader-name">Annabelle Onuma</h3>
+                <p class="leader-title">Founder & CEO</p>
+                <p class="leader-bio">Active forex trader with expertise in market structure, risk management, and capital allocation. Background includes social media management and community building at Cole Tech Yard, a technology hub focused on digital branding and strategic positioning. Applies trading discipline and data-driven decision making to operational execution and business development.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section>
         <div class="container">
+            <h2>Contact</h2>
             <div class="contact-content">
-                <div class="section-subtitle">Get In Touch</div>
-                <h2>Investor Inquiries</h2>
-                <p>Seed round participation is by invitation only. 8 slots available at ₦3.125M per slot. For investment opportunities and additional information, please contact us directly.</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>Email</h4>
-                        <p>invest@hellamedici.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Location</h4>
-                        <p>Nigeria</p>
-                    </div>
-                </div>
-                <div style="margin-top: 60px;">
-                    <a href="mailto:invest@hellamedici.com" class="cta-button">REQUEST INFORMATION</a>
-                </div>
+                <a href="mailto:annabelle.onuma@gmail.com" class="contact-email">annabelle.onuma@gmail.com</a>
             </div>
         </div>
     </section>
@@ -803,7 +399,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Hella Medici Group. All rights reserved. Investment opportunities are offered on a private, invitation-only basis to qualified investors.</p>
+            <p>© 2026 Hella Medici Group. All rights reserved.</p>
         </div>
     </footer>
 </body>
