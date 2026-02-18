@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hella Medici Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,98 +16,147 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #0d0d0d;
-            color: #c0c0c0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0F172A;
+            color: #E5E7EB;
             line-height: 1.7;
             font-weight: 300;
+            font-size: 16px;
         }
 
         h1, h2, h3 {
             font-weight: 300;
-            letter-spacing: 1px;
-            color: #ffffff;
+            letter-spacing: 0.5px;
+            color: #FFFFFF;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 50px;
+            padding: 0 40px;
         }
 
-        /* Header */
-        header {
-            padding: 40px 0;
-            border-bottom: 1px solid #1a1a1a;
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid #1E293B;
+            padding: 25px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
-            font-size: 18px;
-            font-weight: 300;
-            letter-spacing: 4px;
-            color: #b89968;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: #C5A76A;
             text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #C5A76A;
         }
 
         /* Hero */
         .hero {
-            padding: 140px 0 120px;
-            border-bottom: 1px solid #1a1a1a;
+            padding: 200px 0 140px;
+            margin-top: 70px;
         }
 
         .hero h1 {
-            font-size: 52px;
+            font-size: 48px;
             margin-bottom: 30px;
-            line-height: 1.2;
+            line-height: 1.15;
             font-weight: 300;
         }
 
         .hero .tagline {
-            font-size: 16px;
-            color: #808080;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-size: 18px;
+            color: #94A3B8;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            max-width: 700px;
+        }
+
+        .hero .supporting {
+            font-size: 15px;
+            color: #64748B;
+            max-width: 650px;
         }
 
         /* Section */
         section {
             padding: 100px 0;
-            border-bottom: 1px solid #1a1a1a;
+            background-color: #111827;
+            border-top: 1px solid #1E293B;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #0F172A;
         }
 
         section h2 {
-            font-size: 32px;
+            font-size: 28px;
             margin-bottom: 50px;
             font-weight: 300;
+            letter-spacing: 1px;
         }
 
         .section-content {
-            max-width: 800px;
+            max-width: 750px;
         }
 
         .section-content p {
             font-size: 16px;
-            line-height: 1.9;
-            color: #a0a0a0;
+            line-height: 1.8;
+            color: #CBD5E1;
         }
 
         /* Operating Divisions */
         .divisions-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
+            gap: 60px;
             margin-top: 60px;
         }
 
         .division {
-            padding: 50px 0;
-            border-top: 1px solid #b89968;
+            padding-top: 30px;
+            border-top: 1px solid #C5A76A;
         }
 
         .division h3 {
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 18px;
+            margin-bottom: 25px;
             font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .division ul {
@@ -111,8 +164,8 @@
         }
 
         .division li {
-            font-size: 15px;
-            color: #909090;
+            font-size: 14px;
+            color: #94A3B8;
             padding: 10px 0;
             line-height: 1.6;
         }
@@ -121,19 +174,22 @@
         .model-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 40px;
+            gap: 50px;
             margin-top: 60px;
         }
 
         .model-item {
             text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #1E293B;
         }
 
         .model-item h4 {
-            font-size: 14px;
-            color: #b89968;
+            font-size: 13px;
+            color: #C5A76A;
             font-weight: 400;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
         }
 
         /* Growth Framework */
@@ -144,63 +200,75 @@
         .phases {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 60px;
-            margin-bottom: 50px;
+            gap: 70px;
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #1E293B;
         }
 
         .phase {
-            text-align: center;
+            position: relative;
         }
 
-        .phase-arrow {
-            font-size: 24px;
-            color: #404040;
-            margin: 0 20px;
+        .phase:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -35px;
+            top: 0;
+            color: #334155;
+            font-size: 20px;
         }
 
         .phase h4 {
             font-size: 16px;
-            color: #ffffff;
+            color: #FFFFFF;
             margin-bottom: 15px;
             font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .phase p {
             font-size: 14px;
-            color: #707070;
-            line-height: 1.6;
+            color: #64748B;
+            line-height: 1.7;
         }
 
         .framework-desc {
             font-size: 15px;
-            color: #a0a0a0;
+            color: #94A3B8;
             line-height: 1.8;
-            max-width: 700px;
+            max-width: 750px;
         }
 
         /* Leadership */
         .leadership-content {
-            max-width: 700px;
+            max-width: 750px;
             margin-top: 60px;
         }
 
+        .leader-header {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #1E293B;
+        }
+
         .leader-name {
-            font-size: 24px;
-            color: #ffffff;
-            margin-bottom: 5px;
-            font-weight: 300;
+            font-size: 22px;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            font-weight: 400;
         }
 
         .leader-title {
-            font-size: 14px;
-            color: #b89968;
-            margin-bottom: 30px;
+            font-size: 13px;
+            color: #C5A76A;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .leader-bio {
             font-size: 15px;
-            color: #909090;
+            color: #94A3B8;
             line-height: 1.8;
         }
 
@@ -209,40 +277,50 @@
             margin-top: 60px;
         }
 
+        .contact-label {
+            font-size: 13px;
+            color: #64748B;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
         .contact-email {
             font-size: 18px;
-            color: #b89968;
+            color: #C5A76A;
             text-decoration: none;
-            border-bottom: 1px solid #b89968;
-            padding-bottom: 2px;
             display: inline-block;
+            padding-bottom: 3px;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
         }
 
         .contact-email:hover {
-            color: #d4af37;
-            border-bottom-color: #d4af37;
+            border-bottom-color: #C5A76A;
         }
 
         /* Footer */
         footer {
-            padding: 50px 0;
+            padding: 60px 0;
             text-align: center;
+            background-color: #0A0F1E;
+            border-top: 1px solid #1E293B;
         }
 
         footer p {
             font-size: 12px;
-            color: #404040;
-            letter-spacing: 1px;
+            color: #475569;
+            letter-spacing: 0.5px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 0 30px;
+            .container, .nav-container {
+                padding: 0 25px;
             }
 
             .hero {
-                padding: 100px 0 80px;
+                padding: 150px 0 100px;
             }
 
             .hero h1 {
@@ -253,6 +331,11 @@
                 padding: 70px 0;
             }
 
+            section h2 {
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+
             .divisions-grid,
             .model-grid,
             .phases {
@@ -260,66 +343,80 @@
                 gap: 40px;
             }
 
-            section h2 {
-                font-size: 28px;
-                margin-bottom: 40px;
+            .phase:not(:last-child)::after {
+                content: '↓';
+                right: auto;
+                left: 0;
+                top: auto;
+                bottom: -30px;
+            }
+
+            .nav-links {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
             <div class="logo">Hella Medici Group</div>
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#divisions">Divisions</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Building Scalable, Asset-Backed<br>Businesses in Africa</h1>
-            <p class="tagline">Agri-production · Commodities · Treasury operations</p>
+            <h1>Hella Medici Group</h1>
+            <p class="tagline">Structured operations across real assets, trade, and capital markets in Africa.</p>
+            <p class="supporting">Disciplined execution, measurable performance, and institutional governance standards.</p>
         </div>
     </section>
 
     <!-- Company Overview -->
-    <section>
+    <section id="overview">
         <div class="container">
             <h2>Company Overview</h2>
             <div class="section-content">
-                <p>Hella Medici Group is an operating company focused on building and scaling asset-backed businesses across agriculture, bio-resources, and commodities in Africa. We apply disciplined capital allocation, technology-enabled systems, and structured management to create sustainable operations with measurable output and clear demand. Our approach combines real-economy focus with modern operational infrastructure.</p>
+                <p>Hella Medici Group is a multi-division operating group focused on asset-backed scalability across agri-production, commodities trade, and treasury operations. The organization maintains structured governance frameworks, disciplined capital allocation protocols, and performance oversight systems designed for institutional-grade execution. HMG operates with measurable output standards, infrastructure-backed operations, and risk-managed expansion frameworks across African markets.</p>
             </div>
         </div>
     </section>
 
     <!-- Operating Divisions -->
-    <section>
+    <section id="divisions">
         <div class="container">
             <h2>Operating Divisions</h2>
             <div class="divisions-grid">
                 <div class="division">
                     <h3>Agri-Production</h3>
                     <ul>
-                        <li>Black Soldier Fly maggot production for livestock feed</li>
-                        <li>High-margin bio-resource operations</li>
-                        <li>Scalable production with controlled environment systems</li>
+                        <li>Black Soldier Fly production for high-protein livestock feed</li>
+                        <li>Controlled-environment bio-resource operations</li>
+                        <li>Scalable infrastructure with measurable output metrics</li>
                     </ul>
                 </div>
                 <div class="division">
                     <h3>Commodities</h3>
                     <ul>
-                        <li>Stockfish trade and distribution</li>
-                        <li>Agricultural commodity sourcing and export</li>
-                        <li>Structured trade operations with established supply networks</li>
+                        <li>Structured trade and distribution of agricultural products</li>
+                        <li>Stockfish sourcing and export operations</li>
+                        <li>Established supply networks and logistics infrastructure</li>
                     </ul>
                 </div>
                 <div class="division">
                     <h3>Treasury</h3>
                     <ul>
                         <li>Proprietary trading of company balance sheet capital</li>
-                        <li>Diversified market participation across forex, equities, and fixed income</li>
-                        <li>Risk-managed portfolio allocation</li>
+                        <li>Diversified market exposure across forex, equities, and fixed income</li>
+                        <li>Risk-managed portfolio allocation and performance oversight</li>
                     </ul>
                 </div>
             </div>
@@ -332,19 +429,19 @@
             <h2>Operating Model</h2>
             <div class="model-grid">
                 <div class="model-item">
-                    <h4>Real Assets</h4>
+                    <h4>Structured Capital Allocation</h4>
                 </div>
                 <div class="model-item">
-                    <h4>Measurable Output</h4>
+                    <h4>Governance Framework</h4>
                 </div>
                 <div class="model-item">
-                    <h4>Structured Execution</h4>
+                    <h4>Infrastructure-Backed Scalability</h4>
                 </div>
                 <div class="model-item">
-                    <h4>Digital Oversight</h4>
+                    <h4>Measurable Performance Oversight</h4>
                 </div>
                 <div class="model-item">
-                    <h4>Capital Discipline</h4>
+                    <h4>Risk-Managed Execution</h4>
                 </div>
             </div>
         </div>
@@ -358,39 +455,42 @@
                 <div class="phases">
                     <div class="phase">
                         <h4>Foundation</h4>
-                        <p>Establishing core operations, facility infrastructure, and initial production capacity</p>
+                        <p>Core facility infrastructure, operational systems deployment, initial production capacity establishment</p>
                     </div>
                     <div class="phase">
                         <h4>Expansion</h4>
-                        <p>Scaling production volume, launching trade operations, achieving operational break-even</p>
+                        <p>Volume scaling, trade operations launch, cash flow generation, operational break-even achievement</p>
                     </div>
                     <div class="phase">
                         <h4>Scale</h4>
-                        <p>Multi-facility operations, institutional partnerships, structured holding company transition</p>
+                        <p>Multi-facility operations, institutional partnerships, holding company structure transition</p>
                     </div>
                 </div>
-                <p class="framework-desc">HMG operates on a phased deployment model, prioritizing operational validation and cash flow generation before pursuing scale. Each phase builds defensible infrastructure and market position while maintaining disciplined capital allocation. The framework is designed to support systematic expansion across divisions and geographies.</p>
+                <p class="framework-desc">HMG operates on a structured, phase-based deployment model designed for systematic expansion and risk mitigation. Each phase builds operational infrastructure, validates market demand, and establishes cash flow generation before advancing to the next stage. The framework prioritizes capital discipline, measurable performance milestones, and sustainable scalability across divisions and geographies. Strategic progression is governed by operational metrics, market validation, and institutional readiness standards.</p>
             </div>
         </div>
     </section>
 
     <!-- Leadership -->
-    <section>
+    <section id="leadership">
         <div class="container">
             <h2>Leadership</h2>
             <div class="leadership-content">
-                <h3 class="leader-name">Annabelle Onuma</h3>
-                <p class="leader-title">Founder & CEO</p>
-                <p class="leader-bio">Active forex trader with expertise in market structure, risk management, and capital allocation. Background includes social media management and community building at Cole Tech Yard, a technology hub focused on digital branding and strategic positioning. Applies trading discipline and data-driven decision making to operational execution and business development.</p>
+                <div class="leader-header">
+                    <h3 class="leader-name">Annabelle Onuma</h3>
+                    <p class="leader-title">Founder & Chief Executive Officer</p>
+                </div>
+                <p class="leader-bio">Annabelle Onuma is an operating executive and capital strategist focused on structured real-asset growth. At Hella Medici Group, she oversees cross-divisional operations, disciplined capital allocation, and scalable infrastructure development. Her background in market risk management and capital strategy informs HMG's governance framework, execution standards, and long-term expansion model.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section>
+    <section id="contact">
         <div class="container">
             <h2>Contact</h2>
             <div class="contact-content">
+                <p class="contact-label">Email</p>
                 <a href="mailto:annabelle.onuma@gmail.com" class="contact-email">annabelle.onuma@gmail.com</a>
             </div>
         </div>
@@ -399,7 +499,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2026 Hella Medici Group. All rights reserved.</p>
+            <p>© Hella Medici Group. All rights reserved.</p>
         </div>
     </footer>
 </body>
