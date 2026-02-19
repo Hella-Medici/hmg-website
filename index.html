@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hella Medici Group</title>
+    <title>Hella Medici Group | Structured Operations Across Africa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,23 +16,25 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #0F172A;
+            background-color: #0A0F1C;
             color: #E5E7EB;
             line-height: 1.7;
             font-weight: 300;
             font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-weight: 300;
-            letter-spacing: 0.5px;
+            letter-spacing: -0.02em;
             color: #FFFFFF;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 50px;
         }
 
         /* Navigation */
@@ -42,146 +43,292 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(15, 23, 42, 0.95);
-            border-bottom: 1px solid #1E293B;
-            padding: 25px 0;
+            background-color: rgba(10, 15, 28, 0.97);
+            border-bottom: 1px solid rgba(197, 167, 106, 0.1);
+            padding: 28px 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
 
         .nav-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 15px;
-            font-weight: 400;
-            letter-spacing: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 3.5px;
             color: #C5A76A;
             text-transform: uppercase;
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 50px;
             list-style: none;
         }
 
         .nav-links a {
             color: #94A3B8;
             text-decoration: none;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-            transition: color 0.2s ease;
+            font-size: 13px;
+            letter-spacing: 0.8px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #C5A76A;
+            transition: width 0.3s ease;
         }
 
         .nav-links a:hover {
             color: #C5A76A;
         }
 
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
         /* Hero */
         .hero {
-            padding: 200px 0 140px;
-            margin-top: 70px;
+            padding: 240px 0 160px;
+            margin-top: 85px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(197, 167, 106, 0.3), transparent);
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 30px;
-            line-height: 1.15;
+            font-size: 56px;
+            margin-bottom: 35px;
+            line-height: 1.1;
             font-weight: 300;
+            letter-spacing: -0.03em;
         }
 
         .hero .tagline {
-            font-size: 18px;
+            font-size: 19px;
             color: #94A3B8;
-            margin-bottom: 20px;
-            line-height: 1.6;
-            max-width: 700px;
+            margin-bottom: 24px;
+            line-height: 1.7;
+            max-width: 720px;
+            font-weight: 400;
         }
 
         .hero .supporting {
             font-size: 15px;
             color: #64748B;
             max-width: 650px;
+            line-height: 1.8;
         }
 
         /* Section */
         section {
-            padding: 100px 0;
-            background-color: #111827;
-            border-top: 1px solid #1E293B;
+            padding: 120px 0;
+            position: relative;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 100px);
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(197, 167, 106, 0.15), transparent);
         }
 
         section:nth-of-type(even) {
-            background-color: #0F172A;
+            background-color: rgba(17, 24, 39, 0.3);
         }
 
         section h2 {
-            font-size: 28px;
-            margin-bottom: 50px;
+            font-size: 32px;
+            margin-bottom: 60px;
             font-weight: 300;
-            letter-spacing: 1px;
+            letter-spacing: -0.01em;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 1px;
+            background-color: #C5A76A;
         }
 
         .section-content {
-            max-width: 750px;
+            max-width: 800px;
         }
 
         .section-content p {
             font-size: 16px;
-            line-height: 1.8;
+            line-height: 1.9;
             color: #CBD5E1;
+        }
+
+        /* Metrics Section */
+        .metrics {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(197, 167, 106, 0.03), rgba(197, 167, 106, 0.01));
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .metric-item {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(197, 167, 106, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .metric-item:hover {
+            background-color: rgba(15, 23, 42, 0.8);
+            border-color: rgba(197, 167, 106, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 300;
+            color: #C5A76A;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #64748B;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.6;
         }
 
         /* Operating Divisions */
         .divisions-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 60px;
-            margin-top: 60px;
+            gap: 40px;
+            margin-top: 70px;
         }
 
-        .division {
-            padding-top: 30px;
-            border-top: 1px solid #C5A76A;
+        .division-card {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(197, 167, 106, 0.1);
+            padding: 45px 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .division h3 {
-            font-size: 18px;
-            margin-bottom: 25px;
+        .division-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #C5A76A, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .division-card:hover {
+            background-color: rgba(15, 23, 42, 0.9);
+            border-color: rgba(197, 167, 106, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .division-card:hover::before {
+            opacity: 1;
+        }
+
+        .division-card h3 {
+            font-size: 20px;
+            margin-bottom: 28px;
             font-weight: 400;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
+            color: #FFFFFF;
         }
 
-        .division ul {
+        .division-card ul {
             list-style: none;
         }
 
-        .division li {
+        .division-card li {
             font-size: 14px;
             color: #94A3B8;
-            padding: 10px 0;
-            line-height: 1.6;
+            padding: 12px 0;
+            line-height: 1.7;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            transition: color 0.2s ease;
+        }
+
+        .division-card li:last-child {
+            border-bottom: none;
+        }
+
+        .division-card:hover li {
+            color: #CBD5E1;
         }
 
         /* Operating Model */
         .model-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 50px;
-            margin-top: 60px;
+            gap: 30px;
+            margin-top: 70px;
         }
 
         .model-item {
             text-align: center;
-            padding: 30px 0;
-            border-top: 1px solid #1E293B;
+            padding: 40px 20px;
+            background-color: rgba(15, 23, 42, 0.4);
+            border-top: 2px solid rgba(197, 167, 106, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .model-item:hover {
+            background-color: rgba(15, 23, 42, 0.7);
+            border-top-color: #C5A76A;
         }
 
         .model-item h4 {
@@ -189,182 +336,298 @@
             color: #C5A76A;
             font-weight: 400;
             letter-spacing: 0.5px;
-            line-height: 1.5;
+            line-height: 1.6;
+        }
+
+        /* Capabilities */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 70px;
+        }
+
+        .capability-card {
+            background-color: rgba(15, 23, 42, 0.5);
+            border-left: 3px solid #C5A76A;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .capability-card:hover {
+            background-color: rgba(15, 23, 42, 0.8);
+            transform: translateX(4px);
+        }
+
+        .capability-card h3 {
+            font-size: 18px;
+            margin-bottom: 18px;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+
+        .capability-card p {
+            font-size: 14px;
+            color: #94A3B8;
+            line-height: 1.8;
         }
 
         /* Growth Framework */
         .framework-content {
-            margin-top: 60px;
+            margin-top: 70px;
         }
 
         .phases {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 70px;
-            margin-bottom: 60px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid #1E293B;
+            gap: 60px;
+            margin-bottom: 70px;
+            padding-bottom: 70px;
+            border-bottom: 1px solid rgba(197, 167, 106, 0.1);
         }
 
         .phase {
             position: relative;
+            background-color: rgba(15, 23, 42, 0.4);
+            padding: 40px 35px;
+            transition: all 0.3s ease;
+        }
+
+        .phase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #C5A76A, rgba(197, 167, 106, 0.3));
+        }
+
+        .phase:hover {
+            background-color: rgba(15, 23, 42, 0.7);
+            transform: translateY(-4px);
         }
 
         .phase:not(:last-child)::after {
             content: '→';
             position: absolute;
-            right: -35px;
-            top: 0;
-            color: #334155;
-            font-size: 20px;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(197, 167, 106, 0.3);
+            font-size: 24px;
         }
 
         .phase h4 {
-            font-size: 16px;
+            font-size: 17px;
             color: #FFFFFF;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             font-weight: 400;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
         .phase p {
             font-size: 14px;
             color: #64748B;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .framework-desc {
             font-size: 15px;
             color: #94A3B8;
-            line-height: 1.8;
-            max-width: 750px;
+            line-height: 1.9;
+            max-width: 800px;
         }
 
         /* Leadership */
         .leadership-content {
-            max-width: 750px;
-            margin-top: 60px;
+            max-width: 850px;
+            margin-top: 70px;
         }
 
-        .leader-header {
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #1E293B;
+        .leader-card {
+            background-color: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(197, 167, 106, 0.1);
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 45px;
+            align-items: start;
+        }
+
+        .leader-avatar {
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, rgba(197, 167, 106, 0.2), rgba(197, 167, 106, 0.05));
+            border: 2px solid rgba(197, 167, 106, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: 300;
+            color: #C5A76A;
+        }
+
+        .leader-info {
+            padding-top: 8px;
         }
 
         .leader-name {
-            font-size: 22px;
+            font-size: 26px;
             color: #FFFFFF;
             margin-bottom: 8px;
             font-weight: 400;
+            letter-spacing: -0.01em;
         }
 
         .leader-title {
             font-size: 13px;
             color: #C5A76A;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
+            margin-bottom: 28px;
+            display: block;
         }
 
         .leader-bio {
             font-size: 15px;
             color: #94A3B8;
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
         /* Contact */
         .contact-content {
-            margin-top: 60px;
+            margin-top: 70px;
+            max-width: 600px;
         }
 
         .contact-label {
-            font-size: 13px;
+            font-size: 12px;
             color: #64748B;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
+            margin-bottom: 18px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
         .contact-email {
-            font-size: 18px;
+            font-size: 20px;
             color: #C5A76A;
             text-decoration: none;
             display: inline-block;
-            padding-bottom: 3px;
+            padding-bottom: 4px;
             border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
         }
 
         .contact-email:hover {
             border-bottom-color: #C5A76A;
+            color: #D4B87A;
         }
 
         /* Footer */
         footer {
-            padding: 60px 0;
+            padding: 70px 0;
             text-align: center;
-            background-color: #0A0F1E;
-            border-top: 1px solid #1E293B;
+            background-color: #0A0F1C;
+            border-top: 1px solid rgba(197, 167, 106, 0.1);
         }
 
         footer p {
             font-size: 12px;
             color: #475569;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .divisions-grid,
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .model-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .container, .nav-container {
                 padding: 0 25px;
             }
 
             .hero {
-                padding: 150px 0 100px;
+                padding: 180px 0 120px;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 38px;
+            }
+
+            .hero .tagline {
+                font-size: 17px;
             }
 
             section {
-                padding: 70px 0;
+                padding: 80px 0;
             }
 
             section h2 {
-                font-size: 24px;
-                margin-bottom: 40px;
+                font-size: 26px;
+                margin-bottom: 45px;
             }
 
             .divisions-grid,
             .model-grid,
-            .phases {
+            .phases,
+            .capabilities-grid,
+            .metrics-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 30px;
             }
 
             .phase:not(:last-child)::after {
                 content: '↓';
                 right: auto;
-                left: 0;
+                left: 50%;
+                transform: translateX(-50%);
                 top: auto;
-                bottom: -30px;
+                bottom: -15px;
             }
 
             .nav-links {
                 display: none;
+            }
+
+            .leader-card {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 35px;
+            }
+
+            .leader-avatar {
+                margin: 0 auto;
+            }
+
+            .leader-info {
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav id="navbar">
         <div class="nav-container">
             <div class="logo">Hella Medici Group</div>
             <ul class="nav-links">
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#divisions">Divisions</a></li>
+                <li><a href="#capabilities">Capabilities</a></li>
                 <li><a href="#leadership">Leadership</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -377,6 +640,30 @@
             <h1>Hella Medici Group</h1>
             <p class="tagline">Structured operations across real assets, trade, and capital markets in Africa.</p>
             <p class="supporting">Disciplined execution, measurable performance, and institutional governance standards.</p>
+        </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-value">3</div>
+                    <div class="metric-label">Operating Divisions</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">2026</div>
+                    <div class="metric-label">Established</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">Multi</div>
+                    <div class="metric-label">Revenue Streams</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">Africa</div>
+                    <div class="metric-label">Geographic Focus</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -395,7 +682,7 @@
         <div class="container">
             <h2>Operating Divisions</h2>
             <div class="divisions-grid">
-                <div class="division">
+                <div class="division-card">
                     <h3>Agri-Production</h3>
                     <ul>
                         <li>Black Soldier Fly production for high-protein livestock feed</li>
@@ -403,7 +690,7 @@
                         <li>Scalable infrastructure with measurable output metrics</li>
                     </ul>
                 </div>
-                <div class="division">
+                <div class="division-card">
                     <h3>Commodities</h3>
                     <ul>
                         <li>Structured trade and distribution of agricultural products</li>
@@ -411,13 +698,38 @@
                         <li>Established supply networks and logistics infrastructure</li>
                     </ul>
                 </div>
-                <div class="division">
+                <div class="division-card">
                     <h3>Treasury</h3>
                     <ul>
                         <li>Proprietary trading of company balance sheet capital</li>
                         <li>Diversified market exposure across forex, equities, and fixed income</li>
                         <li>Risk-managed portfolio allocation and performance oversight</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="capabilities">
+        <div class="container">
+            <h2>Core Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <h3>Structured Capital Allocation</h3>
+                    <p>Disciplined deployment across divisions with performance-based reallocation protocols. Capital efficiency metrics and return thresholds govern all allocation decisions.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>Operational Governance</h3>
+                    <p>Institutional-grade oversight frameworks, performance monitoring systems, and compliance protocols across all business units.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>Infrastructure Development</h3>
+                    <p>Scalable facility design, technology integration, and systems architecture supporting multi-geography expansion.</p>
+                </div>
+                <div class="capability-card">
+                    <h3>Risk Management</h3>
+                    <p>Comprehensive risk assessment frameworks, mitigation strategies, and continuous monitoring across operational, market, and execution risks.</p>
                 </div>
             </div>
         </div>
@@ -476,11 +788,14 @@
         <div class="container">
             <h2>Leadership</h2>
             <div class="leadership-content">
-                <div class="leader-header">
-                    <h3 class="leader-name">Annabelle Onuma</h3>
-                    <p class="leader-title">Founder & Chief Executive Officer</p>
+                <div class="leader-card">
+                    <div class="leader-avatar">AO</div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Annabelle Onuma</h3>
+                        <span class="leader-title">Founder & Chief Executive Officer</span>
+                        <p class="leader-bio">Annabelle Onuma is an operating executive and capital strategist focused on structured real-asset growth. At Hella Medici Group, she oversees cross-divisional operations, disciplined capital allocation, and scalable infrastructure development. Her background in market risk management and capital strategy informs HMG's governance framework, execution standards, and long-term expansion model.</p>
+                    </div>
                 </div>
-                <p class="leader-bio">Annabelle Onuma is an operating executive and capital strategist focused on structured real-asset growth. At Hella Medici Group, she oversees cross-divisional operations, disciplined capital allocation, and scalable infrastructure development. Her background in market risk management and capital strategy informs HMG's governance framework, execution standards, and long-term expansion model.</p>
             </div>
         </div>
     </section>
@@ -499,8 +814,20 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© Hella Medici Group. All rights reserved.</p>
+            <p>© 2026 Hella Medici Group. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
